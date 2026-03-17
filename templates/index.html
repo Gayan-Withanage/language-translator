@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Language Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Section 1: Input Text -->
+    <div class="section">
+        <h2>Enter Text</h2>
+        <textarea id="inputText" placeholder="Type your text here..." rows="4"></textarea>
+    </div>
+
+    <!-- Section 2: Select Language -->
+    <div class="section">
+        <h2>Select Language</h2>
+        <select id="language">
+            <!-- dynamically loaded from JS -->
+        </select>
+    </div>
+
+    <!-- Section 3: Translate Button -->
+    <div class="section">
+        <button id="btnTranslate">Translate</button>
+    </div>
+
+    <!-- Section 4: Output -->
+    <div class="section">
+        <h2>Translation</h2>
+        <div id="output"></div>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
